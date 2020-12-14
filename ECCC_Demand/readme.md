@@ -1,4 +1,4 @@
------------------------------- FRANÇAIS (English will follow) -------------------------------
+## ------------------------------ FRANÇAIS (English will follow) -------------------------------
 
 Droit d'auteur (C) Mai 2020 Gouvernement du Canada 
 Écrit par Camille Roy, Agence Spatiale Canadienne
@@ -46,7 +46,7 @@ Pour "MOPITT_ECCC_SelectCanada.py" :
  - Pour visualiser les données avec ce script, il faut installer la librairie python Basemap, un module de Matplotlib qui permet de faire de la visualisation sur une carte du monde:  conda install basemap
 
 
------------------------------- ENGLISH (Français précède) ------------------------------
+## ------------------------------ ENGLISH (Français précède) ------------------------------
 
 # Python scripts to convert MOPITT data of the NASA OpenDap database from HDFEOS files to csv format. 
 
