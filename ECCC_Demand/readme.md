@@ -1,4 +1,5 @@
-﻿------------------------------ FRANÇAIS (English will follow) ------------------------------
+------------------------------ FRANÇAIS (English will follow) -------------------------------
+
 Droit d'auteur (C) Mai 2020 Gouvernement du Canada 
 Écrit par Camille Roy, Agence Spatiale Canadienne
 Dernière modification le 2020-11-25
