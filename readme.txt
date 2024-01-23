@@ -1,4 +1,4 @@
-﻿------------------------------ FRANÇAIS (English will follow) ------------------------------
+﻿------------------------------ FRANÇAIS (English follows) ------------------------------
 
 # Codes pour filtrer et convertir en fichier .csv les fichier HDFEOS (.he5), et visualiser les données MOPITT, développés pour le site de données ouvertes de l'ASC.
 
