@@ -32,12 +32,6 @@ conda install -c conda-forge --file requirements.txt
 ```
 3. Commencez le tutoriel trouvé dans le fichier _mopitt_tutorial.ipynb_. Veuillez noter que les graphiques ne s'affichent pas dans Github, et que vous devrez configurer le projet localement pour les visualiser.
 
-## Modèle de prévision de la concentration d'ozone de MOPITT
-
-En complément à ce tutoriel, vous pouvez trouver une implémentation simple d'un modèle de réseau neuronal prédictif qui utilise les données SCISAT. Le fichier _scisat_mlp.ipynb_ présente un guide, étape par étape, de la création et de l'analyse initiale du modèle.
-
-Veuillez noter que les prédictions et les résultats statistiques contenus dans ce tutoriel n'ont pas fait l'objet d'un examen scientifique par les pairs et ne doivent pas être utilisés à l'appui d'une analyse ou d'une publication scientifique.
-
 
 # MOPITT-Tutorial
 
@@ -63,8 +57,3 @@ conda install -c conda-forge --file requirements.txt
 ```
 3. Run the tutorial found in the _mopitt_tutorial.ipynb_ file. Please note that the plots do not display in Github, and you will have to set up the project locally in order to view them.
 
-## MOPITT Ozone Concentration Prediction Model
-
-As an addition to this tutorial, you can find a simple implementation of a predictive neural network model that uses SCISAT data. The notebook found in _scisat_mlp.ipynb_ contains a step by step guide of the creation and initial analysis of the model.
-
-Please be advised that the predictions and statistical results contained in this tutorial have not been scientifically peer-reviewed and should not be used to support any scientific analysis or publication.
