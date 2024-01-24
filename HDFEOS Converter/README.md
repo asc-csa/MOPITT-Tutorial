@@ -7,6 +7,7 @@
 This section gives the code to filter and to convert MOPITT data from HDFEOS (.he5) to CSV, as well as visualize the results. The scripts were written for the CSA Open Data website. 
 
 The python script "MOPITTData_FileConverter.py" filters the data to select the needed variables, and converts it in CSV files.
+
 The script "MOPITTData_ReaderAndVisualization.py" reads the CSV files and outputs an exemple of data visualization.
 
 ## Quick Start
@@ -41,13 +42,17 @@ The files contain 14 columns. The first two are the coordinates (latitude and lo
  - RetrievedSurfaceTemperature (last column): Temperature measurements at the surface [K].
 
 Other variables are available in the original HDFEOS files such as information on the surface properties, clouds, atmospheric profiles and radiances, that can be used for further analysis.
+
 Information on all the data available in the .he5 files can be found in appendices A and B of the document: https://www2.acom.ucar.edu/sites/default/files/mopitt/v8_users_guide_201812.pdf
 
 ## Python Scripts
 
 Copyright (C) 2018 The HDF Group 
+
 Both scripts are based on the HDF Group example code: http://hdfeos.org/zoo/LaRC/MOP02J-20131129-L2V17.8.3.he5.py
+
 More examples and descriptions on the MOPITT data reading/visualization are available at : http://hdfeos.org/zoo/index_openLaRC_Examples.php#MOPITT
+
 
 
 # MOPITT-Tutoriel
@@ -57,6 +62,7 @@ More examples and descriptions on the MOPITT data reading/visualization are avai
 Cette section présente le code pour filtrer et convertir les fichier HDFEOS (.he5) en fichier CSV, et pour visualiser les données MOPITT, développés pour le site de données ouvertes de l'ASC.
 
 Le script python "MOPITTData_FileConverter.py" traite les données et sélectionne les variables voulues dans le tableau, pour ensuite les convertir en fichiers de type CSV. 
+
 Le script "MOPITTData_ReaderAndVisualization.py" lit les fichiers CSV et sort un exemple de visualisation.
 
 ## Démarrage rapide
@@ -89,11 +95,14 @@ Le fichier contient 14 colonnes. Les deux premières sont les coordonnées latit
  - COMixingRatio (10 columns): "Mixing Ratio" du CO à 10 niveaux de pression différents (surface + 900 hPa-100 hPa par bonds de 100hPa) [ppbv].
  - RetrievedSurfaceTemperature (last column): Mesure de la température à la surface [K]
 
-D'autres variables sont disponibles dans les fichiers HDFEOS originaux tel que des propriétés de la surface, des nuages, de l'atmosphère et du rayonnement, qui pourrait être utilisées dans une analyse plus poussée. 
+D'autres variables sont disponibles dans les fichiers HDFEOS originaux tel que des propriétés de la surface, des nuages, de l'atmosphère et du rayonnement, qui pourrait être utilisées dans une analyse plus poussée.
+
 Les informations sur toutes les variables des fichiers .he5 se trouvent dans les appendices A et B du document: https://www2.acom.ucar.edu/sites/default/files/mopitt/v8_users_guide_201812.pdf
 
 ## Scripts Python
 
 Copyright (C) 2018 The HDF Group 
+
 Les deux scripts se basent sur le code de l'équipe HDF : http://hdfeos.org/zoo/LaRC/MOP02J-20131129-L2V17.8.3.he5.py
+
 D’autres exemples et explications sur la lecture/visualisation pour les données de MOPITT sont disponibles sur : http://hdfeos.org/zoo/index_openLaRC_Examples.php#MOPITT
