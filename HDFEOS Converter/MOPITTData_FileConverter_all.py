@@ -2,24 +2,24 @@
 """
 Copyrights / Droit d'auteurs
 (C) 2018 The HDF Group 
-(C) 2020 Government of Canada
+(C) 2024 Government of Canada
 
 ----
 This example code was written for the Canadian Space Agency Open Data site
 
 It illustrates how to access the MOPITT MOP02J version 8 
-HDF-EOS5 NASA database in Python. and convert all files into csv format.
+HDF-EOS5 NASA database in Python. and convert all files into CSV format.
 
 
 ----
-Ce code d'exemple a été écris pour le site de données ouvertes de 
+Ce code d'exemple a été écrit pour le portail de données ouvertes de 
 l'Agence Spatiale Canadienne
 
 Il montre comment accéder à la base de données de la NASA des fichiers
-MOPITT MOP02J version 8 HDF_EOS5 en python et de les convertir en fichiers csv.
+MOPITT MOP02J version 8 HDF_EOS5 en python et de les convertir en Python.
 
 ----
-Tested under / Testé sous: Python 3.7
+Tested under / Testé sous: Python 3.8
 Last updated / Modifié le: 2020-08-10 
 By / Par : Camille Roy, Canadian Space Agency / Agence Spatiale Canadienne 
 """
@@ -48,7 +48,7 @@ ftp.dir(dirlist.append)
 def convert (year) :   
     """
     This function gets data from the NASA FTP link, selcets wanted variables
-    and converts it to a csv table
+    and converts it to a CSV table
 
     Parameters
     ----------
@@ -137,7 +137,7 @@ def convert (year) :
                 #End loop on RetrievedCOMixingRatioProfile
             Tab[:,13]=data4[0] #RetrievedSurfaceTemperature
         
-            #Sauvegarde du fichier en type .csv / Save csv file 
+            #Sauvegarde du fichier en type CSV / Save CSV file 
             np.savetxt(FILE_NAME.replace('.he5','.csv'), Tab,'%g',delimiter=',',
                         header='Latitude, Longitude, COTotalColumn,COMixingRatio surface,COMixingRatio 900hPa,COMixingRatio 800hPa,COMixingRatio 700hPa,COMixingRatio 600hPa, COMixingRatio 500hPa,COMixingRatio 400hPa,COMixingRatio 300hPa,COMixingRatio 200hPa,COMixingRatio 100hPa,RetrievedSurfaceTemperature ')
             print('CSV File downloaded')

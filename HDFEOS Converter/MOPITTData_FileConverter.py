@@ -2,25 +2,25 @@
 """
 Copyrights / Droit d'auteurs
 (C) 2018 The HDF Group 
-(C) 2020 Government of Canada
+(C) 2024 Government of Canada
 
 ----
 This example code was written for the CSA Open Data website.
 
 It illustrates how to access a MOPITT MOP02J version 8 
-HDF-EOS5 Grid file in Python. and convert it into a csv file.
+HDF-EOS5 Grid file in Python. and convert it into a CSV file.
 
 The HDF file must be in your current working directory.
 
 ----
-Ce code d'exemple a été écris pour le site de données ouvertes de l'ASC.
+Ce code d'exemple a été écrit pour le portail de données ouvertes de l'ASC.
 
 Il montre comment accéder à un fichier MOPITT MOP02J version 8
-HDF_EOS5 en python et le convertir en fichier csv.
-Le fichier HDF doit être dans le même dossier que le code .py . 
+HDF_EOS5 en python et le convertir en fichier CSV.
+Le fichier HDF doit être dans le même dossier que le code en Python. 
 
 ----
-Tested under / Testé sous: Python 3.7
+Tested under / Testé sous: Python 3.8
 Last updated / Modifié le: 2020-05-13 
 By / Par : Camille Roy, Canadian Space Agency / Agence Spatiale Canadienne 
 """
