@@ -14,6 +14,8 @@ MOPITT is one of five instruments launched December 18, 1999, aboard Terra, a Na
 
 The purpose of this tutorial is to help demonstrate the process of accessing the SCISAT data, preparing it for use, and to show some basic data analysis and visualisation using the MOPITT data aboard Terra. This tutorial uses measurements of carbon monoxide in the troposphere as analysis data.
 
+<a href="https://mopitt.physics.utoronto.ca">More information on the MOPITT instrument - University of Toronto</a>
+
 ## Quick Start
 
 1.	Setup a virtual environment or conda environment with the following version of python
@@ -39,6 +41,7 @@ MOPITT est un des cinq instruments lancés le 18 décembre 1999 à bord de Terra
 
 Le but de ce tutoriel est de démontrer le processus d'accès à ces données, de les préparer pour l'utilisation, et de montrer quelques analyses et visualisations de données de base en utilisant les données de l'instrument MOPITT du satellite Terra. Ce tutoriel utilise les mesures du monoxyde de carbone dans la troposphère pour analyse.
 
+<a href="https://mopitt.physics.utoronto.ca">Plus d'informations sur l'instrument MOPITT - Université de Toronto</a>
 
 ## Démarrage rapide
 
