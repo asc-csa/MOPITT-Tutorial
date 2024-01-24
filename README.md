@@ -4,8 +4,8 @@
     </a>
 </p>
 
-- [En Français](#MOPITT-Tutoriel)
-- [In English](#MOPITT-Tutorial)
+- [Français](#MOPITT-Tutoriel)
+- [English](#MOPITT-Tutorial)
 
 # MOPITT-Tutoriel
 
