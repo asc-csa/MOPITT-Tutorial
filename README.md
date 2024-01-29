@@ -3,6 +3,25 @@
         <img alt="MOPITT" src="https://www.asc-csa.gc.ca/images/satellites/ban-mopitt-span6.jpg">
     </a>
 </p>
+<br>
+<br>
+<p align="center">
+    <a href="#stars">
+        <img alt="Étoiles sur GitHub | GitHub Repo stars" src="https://img.shields.io/github/stars/asc-csa/MOPITT">
+    </a>
+    <a href="#watchers">
+        <img alt="Spectateurs sur Github | GitHub watchers" src="https://img.shields.io/github/watchers/asc-csa/MOPITT">
+    </a>
+    <a href="https://github.com/asc-csa/LEAD-Rover-Data-Tutorial/commits/main">
+        <img alt="Dernier commit sur GitHub | GitHub last commit" src="https://img.shields.io/github/last-commit/asc-csa/MOPITT">
+    </a>
+    <a href="https://github.com/asc-csa/LEAD-Rover-Data-Tutorial/graphs/contributors">
+        <img alt="Contributeurs sur GitHub | GitHub contributors" src="https://img.shields.io/github/contributors/asc-csa/MOPITT">
+    </a>
+    <a href="https://twitter.com/intent/follow?screen_name=csa_asc">
+        <img alt="Suivre sur Twitter | Twitter Follow" src="https://img.shields.io/twitter/follow/csa_asc?style=social">
+    </a>
+</p>
 
 - [Français](#MOPITT-Tutoriel)
 - [English](#MOPITT-Tutorial)
