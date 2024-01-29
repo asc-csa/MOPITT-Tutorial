@@ -12,7 +12,7 @@
 
 MOPITT is one of five instruments launched December 18, 1999, aboard Terra, a National Aeronautics and Space Administration (NASA) satellite orbiting 705 km above the Earth. It was designed by Jim Drummond of the University of Toronto and, with the help of his science team and the Canadian Space Agency (CSA), prepared for NASA. Initially planned for a five-year term, the experiment has been prolonged because the data collected is still of high quality and the satellite is in good health. MOPITT was manufactured by COM DEV International, of Cambridge, Ontario.
 
-The purpose of this tutorial is to help demonstrate the process of accessing the SCISAT data, preparing it for use, and to show some basic data analysis and visualisation using the MOPITT data aboard Terra. This tutorial uses measurements of carbon monoxide in the troposphere as analysis data.
+The purpose of this tutorial is to help demonstrate the process of accessing the MOPITT data, preparing it for use, and to show some basic data analysis and visualisation using the MOPITT data aboard Terra. This tutorial uses measurements of carbon monoxide in the troposphere as analysis data.
 
 <a href="https://mopitt.physics.utoronto.ca">More information on the MOPITT instrument - University of Toronto</a>
 
