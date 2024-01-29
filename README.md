@@ -32,6 +32,7 @@ conda install -c conda-forge --file requirements.txt
 ```
 3. Run the tutorial found in the _mopitt_tutorial.ipynb_ file. Please note that the plots do not display in Github, and you will have to set up the project locally in order to view them.
 
+***
 
 # MOPITT-Tutoriel
 
