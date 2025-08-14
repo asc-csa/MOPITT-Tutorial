@@ -1,10 +1,8 @@
 <p align="center">
-    <a href="https://www.asc-csa.gc.ca/eng/satellites/mopitt.asp">
-        <img alt="MOPITT" src="https://www.asc-csa.gc.ca/images/satellites/ban-mopitt-span6.jpg">
-    </a>
+   <img src="https://www.asc-csa.gc.ca/images/satellites/ban-mopitt-span6.jpg" alt="MOPITT" height=300>
+   <br> Crédit d'image | Image credit: <a href="https://www.asc-csa.gc.ca/eng/satellites/mopitt.asp">ASC-CSA</a>
 </p>
-<br>
-<br>
+
 <p align="center">
     <a href="#stars">
         <img alt="Étoiles sur GitHub | GitHub Repo stars" src="https://img.shields.io/github/stars/asc-csa/MOPITT">
@@ -12,10 +10,10 @@
     <a href="#watchers">
         <img alt="Spectateurs sur Github | GitHub watchers" src="https://img.shields.io/github/watchers/asc-csa/MOPITT">
     </a>
-    <a href="https://github.com/asc-csa/LEAD-Rover-Data-Tutorial/commits/main">
+    <a href="https://github.com/asc-csa/MOPITT/commits/main">
         <img alt="Dernier commit sur GitHub | GitHub last commit" src="https://img.shields.io/github/last-commit/asc-csa/MOPITT">
     </a>
-    <a href="https://github.com/asc-csa/LEAD-Rover-Data-Tutorial/graphs/contributors">
+    <a href="https://github.com/asc-csa/MOPITT/graphs/contributors">
         <img alt="Contributeurs sur GitHub | GitHub contributors" src="https://img.shields.io/github/contributors/asc-csa/MOPITT">
     </a>
     <a href="https://twitter.com/intent/follow?screen_name=csa_asc">
@@ -23,60 +21,140 @@
     </a>
 </p>
 
-- [Français](#MOPITT-Tutoriel)
-- [English](#MOPITT-Tutorial)
-# MOPITT-Tutorial
+---
 
-## About
+<h3 align="center">
+  <a href="#titre-du-projet">Français</a> |
+  <a href="#project-title">English (follows)</a>
+</h3>
 
-MOPITT is one of five instruments launched December 18, 1999, aboard Terra, a National Aeronautics and Space Administration (NASA) satellite orbiting 705 km above the Earth. It was designed by Jim Drummond of the University of Toronto and, with the help of his science team and the Canadian Space Agency (CSA), prepared for NASA. Initially planned for a five-year term, the experiment has been prolonged because the data collected is still of high quality and the satellite is in good health. MOPITT was manufactured by COM DEV International, of Cambridge, Ontario.
+---
 
-The purpose of this tutorial is to help demonstrate the process of accessing the MOPITT data, preparing it for use, and to show some basic data analysis and visualisation using the MOPITT data aboard Terra. This tutorial uses measurements of carbon monoxide in the troposphere as analysis data.
+<a id="titre-du-projet"></a>
+# MOPITT - Tutoriel
 
-<a href="https://mopitt.physics.utoronto.ca">More information on the MOPITT instrument - University of Toronto</a>
+> **Description brève :**
+> Ce tutoriel montre comment accéder, préparer et analyser les données de l'instrument MOPITT à bord de Terra.
 
-## Quick Start
+## À propos
 
-1.	Setup a virtual environment or conda environment with the following version of python
-```
-python = 3.8
-```
-2.  Install requirements from the requirements.txt file 
-```
-pip install -r requirements.txt
-```
-or 
-```
-conda install -c conda-forge --file requirements.txt
-```
-3. Run the tutorial found in the _mopitt_tutorial.ipynb_ file. Please note that the plots do not display in Github, and you will have to set up the project locally in order to view them.
+**MOPITT - Tutoriel** est un tutoriel Jupyter Notebook qui guide les utilisateurs à travers l'accès, la préparation et l'analyse des données de l'instrument MOPITT à bord du satellite Terra. Il couvre :
 
-***
+- Accès aux données MOPITT via les archives
+- Préparation et traitement des données de monoxyde de carbone
+- Analyses de base et visualisations des mesures troposphériques
+- Techniques de cartographie et d'analyse temporelle
 
-# MOPITT-Tutoriel
+MOPITT est un des cinq instruments lancés le 18 décembre 1999 à bord de Terra, un satellite de la NASA qui orbite à 705 km au-dessus de la Terre. C'est Jim Drummond, de l'Université de Toronto, qui a conçu MOPITT (*Measurements Of Pollution In The Troposphere*), fabriqué par COM DEV International.
 
-## Contexte
+*Ce tutoriel est fourni à des fins pédagogiques et expérimentales.*
 
-MOPITT est un des cinq instruments lancés le 18 décembre 1999 à bord de Terra, un satellite de la NASA qui orbite à 705 km au-dessus de la Terre. C'est Jim Drummond, de l'Université de Toronto, qui a conçu MOPITT. Grâce à son équipe scientifique et à l'Agence spatiale canadienne (ASC), M. Drummond a proposé cet instrument à la NASA. La durée initiale de cinq ans de l'expérience a été prolongée en raison de la qualité des informations amassées et du bon fonctionnement du satellite. MOPITT, pour measurements of pollution in the troposphere (instrument de mesure de la pollution dans la troposphère), a été fabriqué par COM DEV International, une entreprise de Cambridge, en Ontario.
+Pour plus d'informations : [MOPITT - Université de Toronto](https://mopitt.physics.utoronto.ca)
 
-Le but de ce tutoriel est de démontrer le processus d'accès à ces données, de les préparer pour l'utilisation, et de montrer quelques analyses et visualisations de données de base en utilisant les données de l'instrument MOPITT du satellite Terra. Ce tutoriel utilise les mesures du monoxyde de carbone dans la troposphère pour analyse.
+## Prérequis
 
-<a href="https://mopitt.physics.utoronto.ca">Plus d'informations sur l'instrument MOPITT - Université de Toronto</a>
+- Python 3.8
+- Jupyter Notebook ou Jupyter Lab
+- Connexion Internet (pour le téléchargement des données MOPITT)
+- Bibliothèques scientifiques Python (NumPy, Matplotlib, etc.)
 
 ## Démarrage rapide
 
-1.	Configurez un environnement virtuel ou un environnement conda avec la version suivante de python
-```
-python = 3.8
-```
-2.  Installez les exigences à partir du fichier requirements.txt 
-```
-pip install -r requirements.txt
-```
-ou 
-```
-conda install -c conda-forge --file requirements.txt
-```
-3. Commencez le tutoriel trouvé dans le fichier _mopitt_tutorial.ipynb_. Veuillez noter que les graphiques ne s'affichent pas dans Github, et que vous devrez configurer le projet localement pour les visualiser.
+1. 📦 **Cloner le dépôt**
+   ```bash
+   git clone https://github.com/asc-csa/MOPITT.git
+   cd MOPITT
+   ```
+2. 🐍 **Créer un environnement**
+   ```bash
+   # Avec virtualenv
+   python -m venv env
+   source env/bin/activate
 
+   # Ou avec conda
+   conda create -n mopitt_env python=3.8
+   conda activate mopitt_env
+   ```
+3. 📥 **Installer les dépendances**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. 🚀 **Lancer le tutoriel**
+   ```bash
+   jupyter notebook mopitt_tutorial.ipynb
+   ```
 
+> **Remarque :** Les graphiques ne s'affichent pas dans GitHub et vous devrez configurer le projet localement pour les visualiser.
+
+## Licence
+
+Ce projet est sous une licence MIT modifiée – voir le fichier [LICENSE](https://github.com/asc-csa/MOPITT/blob/main/LICENSE.txt) pour plus de détails.
+
+---
+
+<h3 align="center">
+  <a href="#project-title">English </a> |
+  <a href="#titre-du-projet">Français (précède)</a>
+</h3>
+
+---
+
+<a id="project-title"></a>
+# MOPITT Tutorial
+
+> **Brief description:**
+> This tutorial demonstrates how to access, prepare, and analyze MOPITT data from the Terra satellite.
+
+## About
+
+**MOPITT Tutorial** is a Jupyter Notebook tutorial that guides users through accessing, preparing, and analyzing MOPITT instrument data from the Terra satellite. It covers:
+
+- Accessing MOPITT data via archives
+- Preparing and processing carbon monoxide data
+- Basic analysis and visualization of tropospheric measurements
+- Mapping and temporal analysis techniques
+
+MOPITT is one of five instruments launched December 18, 1999, aboard Terra, a NASA satellite orbiting 705 km above the Earth. It was designed by Jim Drummond of the University of Toronto (*Measurements Of Pollution In The Troposphere*), manufactured by COM DEV International of Cambridge, Ontario.
+
+*This tutorial is provided for educational and experimental purposes.*
+
+More information: [MOPITT - University of Toronto](https://mopitt.physics.utoronto.ca)
+
+## Prerequisites
+
+- Python 3.8
+- Jupyter Notebook or Jupyter Lab
+- Internet connection (for MOPITT data download)
+- Scientific Python libraries (NumPy, Matplotlib, etc.)
+
+## Quick Start
+
+1. 📦 **Clone the repo**
+   ```bash
+   git clone https://github.com/asc-csa/MOPITT.git
+   cd MOPITT
+   ```
+2. 🐍 **Create environment**
+   ```bash
+   # Using virtualenv
+   python -m venv env
+   source env/bin/activate
+
+   # Or using conda
+   conda create -n mopitt_env python=3.8
+   conda activate mopitt_env
+   ```
+3. 📥 **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. 🚀 **Run the tutorial**
+   ```bash
+   jupyter notebook mopitt_tutorial.ipynb
+   ```
+
+> **Note:** Plots do not display in GitHub; you will need to set up the project locally to view visualizations.
+
+## License
+
+This project is licensed under a modified MIT license - see the [LICENSE](https://github.com/asc-csa/MOPITT/blob/main/LICENSE.txt) file for details.
