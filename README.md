@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://www.asc-csa.gc.ca/images/satellites/ban-mopitt-span6.jpg" alt="MOPITT" height=300>
+   <img height="300" alt="MOPITT" src="https://www.asc-csa.gc.ca/images/satellites/ban-mopitt-span6.jpg" />
    <br> Crédit d'image | Image credit: <a href="https://www.asc-csa.gc.ca/eng/satellites/mopitt.asp">ASC-CSA</a>
 </p>
 
@@ -158,3 +158,4 @@ More information: [MOPITT - University of Toronto](https://mopitt.physics.utoron
 ## License
 
 This project is licensed under a modified MIT license - see the [LICENSE](https://github.com/asc-csa/MOPITT/blob/main/LICENSE.txt) file for details.
+
