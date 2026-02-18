@@ -14,7 +14,7 @@ The script "MOPITTData_ReaderAndVisualization.py" reads the CSV files and output
 
 1.	Setup a virtual environment or conda environment with the following version of python
 ```
-python = 3.8
+python = 3.8 or better
 ```
 2.  Install requirements from the requirements.txt file 
 ```
@@ -69,7 +69,7 @@ Le script "MOPITTData_ReaderAndVisualization.py" lit les fichiers CSV et sort un
 
 1.	Configurez un environnement virtuel ou un environnement conda avec la version suivante de python
 ```
-python = 3.8
+python = 3.8 ou plus
 ```
 2.  Installez les exigences à partir du fichier requirements.txt 
 ```
@@ -80,7 +80,7 @@ ou
 conda install -c conda-forge --file requirements.txt
 ```
 
-## Convertor les données MOPITT 
+## Convertir les données MOPITT 
 
 Les données originales ont été prises en format HDFEOS (.he5) à partir de la base de données ftp://l5ftl01.larc.nasa.gov/MOPITT/MOP03J.008
 Il est à noter que le satellite MOPITT prend entre 3 et 4 jours pour obtenir une mesure globale des données.
