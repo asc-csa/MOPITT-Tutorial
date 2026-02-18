@@ -1,5 +1,5 @@
 <p align="center">
-   <img height="300" alt="MOPITT" src="https://www.asc-csa.gc.ca/images/satellites/ban-mopitt-span6.jpg" />
+   <img height="300" alt="MOPITT" src="mopitt-banner.jpg" />
    <br> Crédit d'image | Image credit: <a href="https://www.asc-csa.gc.ca/eng/satellites/mopitt.asp">ASC-CSA</a>
 </p>
 
