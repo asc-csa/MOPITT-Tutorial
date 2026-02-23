@@ -2,7 +2,7 @@
 """
 Copyrights / Droit d'auteurs
 (C) 2018 The HDF Group 
-(C) 2024 Government of Canada
+(C) 2026 Government of Canada
 
 ----
 This example code was written for the CSA Open Data website.
@@ -20,73 +20,81 @@ HDF_EOS5 en python et le convertir en fichier CSV.
 Le fichier HDF doit être dans le même dossier que le code en Python. 
 
 ----
-Tested under / Testé sous: Python 3.8
-Last updated / Modifié le: 2020-05-13 
-By / Par : Camille Roy, Canadian Space Agency / Agence Spatiale Canadienne 
+Tested under / Testé sous: Python 3.11
+Last updated / Modifié le: 2026-02-20
+By / Par : Camille Roy,    Canadian Space Agency / Agence Spatiale Canadienne 
+           Emiline Filion, Canadian Space Agency / Agence Spatiale Canadienne 
 """
 
 import os
 import re
 import h5py
 import numpy as np
+import pandas as pd
 
-#Nom du fichier HDF à lire / Name of the HDF file to read
-FILE_NAME = 'MOP02J-20200322-L2V18.0.3.he5'
 
-with h5py.File(FILE_NAME, mode='r') as f:
-    #Lecture des données hdf / reading hdf data
-    #Pour voir toutes les variables dipsonible / to see all available data : 
-    # print(f['/HDFEOS/SWATHS/MOP02/Data Fields'].keys())
-    group = f['HDFEOS/SWATHS/MOP02/Data Fields'] #location of data 
+# Constants
+NB_COLUMNS = 14
+COMMA_DELIMITER = ','
+DATA_LOCATION = 'HDFEOS/SWATHS/MOP02/Data Fields'
+LATITUDE_LOCATION = 'HDFEOS/SWATHS/MOP02/Geolocation Fields/Latitude'
+LONGITUDE_LOCATION = 'HDFEOS/SWATHS/MOP02/Geolocation Fields/Longitude'
+file_name = 'MOP02J-20241110-L2V20.2.3.he5'
+
+
+with h5py.File(file_name, mode='r') as f:
+
+    # Read the HDFEOS (.he5) file
+    # Uncomment the next line to see all available data
+    # print(f[DATA_LOCATION].keys())
+    group = f[DATA_LOCATION]
     
-    #RetrievedCOTotalColumn
+    # RetrievedCOTotalColumn
     dsname1 = 'RetrievedCOTotalColumn'   
     data1 = group[dsname1][:].T 
     units1 = group[dsname1].attrs['units'].decode() #Units
     fillvalue1 = group[dsname1].attrs['_FillValue'] 
     data1[data1 == fillvalue1] = np.nan 
     
-    #RetrievedCOMixingRatioProfile
+    # RetrievedCOMixingRatioProfile
     dsname2 = 'RetrievedCOSurfaceMixingRatio'  
     data2 = group[dsname2][:].T
     units2 = group[dsname2].attrs['units'].decode() #Units
     fillvalue2 = group[dsname2].attrs['_FillValue'] 
     data2[data2 == fillvalue2] = np.nan 
     
-    #RetrievedCOSurfaceMixingRatio
+    # RetrievedCOSurfaceMixingRatio
     dsname3 = 'RetrievedCOMixingRatioProfile'      
     data3 = group[dsname3][:].T[0] 
     units3 = group[dsname3].attrs['units'].decode() #Units
     fillvalue3 = group[dsname3].attrs['_FillValue'] 
     data3[data3 == fillvalue3] = np.nan 
     
-    #RetrievedCOSurfaceMixingRatio
+    # RetrievedCOSurfaceMixingRatio
     dsname4 = 'RetrievedSurfaceTemperature'      
     data4 = group[dsname4][:].T 
     units4 = group[dsname4].attrs['units'].decode() #Units
     fillvalue4 = group[dsname4].attrs['_FillValue'] 
     data4[data4 == fillvalue4] = np.nan 
     
-    # Info de géolocalisation / Geolocalisation information at:
+    # Geolocalisation information at:
     # '/HDFEOS INFORMATION/StructMetadata.0' 
-    lat = f['HDFEOS/SWATHS/MOP02/Geolocation Fields/Latitude'][()]
-    long = f['HDFEOS/SWATHS/MOP02/Geolocation Fields/Longitude'][()]
+    latitude = f[LATITUDE_LOCATION][()]
+    longitude = f[LONGITUDE_LOCATION][()]
 
-    #FORMAT DES DONNÉES POUR METTRE EN CSV.
-    #DATA FORMAT FOR CSV TABLE
-    n = 14 #Nombre de colonnes / Number of columns
-    Tab = np.zeros((lat.size,n)) #Tableau vide à remplir / Empty table to fill
+    # Disable scientific notation globally
+    np.set_printoptions(suppress=True, precision=6)
 
-    # Remplissage avec les données / Filling table with data
-    Tab[:,0]=lat    #Latitude
-    Tab[:,1]=long   #Longitude
-    Tab[:,2]=data1[0] #COTotalColumn
-    Tab[:,3]=data2[0] #RetrievedCOSurfaceMixingRatio
+    # Fill data
+    converted_data = np.zeros((latitude.size, NB_COLUMNS))
+    converted_data[:,0] = latitude
+    converted_data[:,1] = longitude
+    converted_data[:,2] = data1[0] #COTotalColumn
+    converted_data[:,3] = data2[0] #RetrievedCOSurfaceMixingRatio
     for i in range(data3.shape[0]): #Loop on RetrievedCOMixingRatioProfile
-        Tab[:,4+i]=data3[i]
-        #End loop on RetrievedCOMixingRatioProfile
-    Tab[:,13]=data4[0] #RetrievedSurfaceTemperature
+        converted_data[:,4+i] = data3[i]
 
-    #Sauvegarde du fichier en type .csv / Save csv file 
-    np.savetxt(FILE_NAME.replace('.he5','.csv'), Tab,delimiter=',',
-               header='Latitude, Longitude, COTotalColumn,COMixingRatio surface,COMixingRatio 900hPa,COMixingRatio 800hPa,COMixingRatio 700hPa,COMixingRatio 600hPa, COMixingRatio 500hPa,COMixingRatio 400hPa,COMixingRatio 300hPa,COMixingRatio 200hPa,COMixingRatio 100hPa,RetrievedSurfaceTemperature ')
+    converted_data[:,13] = data4[0] #RetrievedSurfaceTemperature
+
+    # Save data to CSV
+    np.savetxt(file_name.replace('.he5','.csv'), converted_data, fmt="%.6f", delimiter=COMMA_DELIMITER, header='Latitude, Longitude, COTotalColumn,COMixingRatio surface,COMixingRatio 900hPa,COMixingRatio 800hPa,COMixingRatio 700hPa,COMixingRatio 600hPa, COMixingRatio 500hPa,COMixingRatio 400hPa,COMixingRatio 300hPa,COMixingRatio 200hPa,COMixingRatio 100hPa,RetrievedSurfaceTemperature ')
