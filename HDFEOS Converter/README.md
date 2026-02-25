@@ -47,8 +47,6 @@ Information on all the data available in the .he5 files can be found in appendic
 
 ## Python Scripts
 
-Copyright (C) 2018 The HDF Group 
-
 Both scripts are based on the HDF Group example code: http://hdfeos.org/zoo/LaRC/MOP02J-20131129-L2V17.8.3.he5.py
 
 More examples and descriptions on the MOPITT data reading/visualization are available at : http://hdfeos.org/zoo/index_openLaRC_Examples.php#MOPITT
@@ -100,8 +98,6 @@ D'autres variables sont disponibles dans les fichiers HDFEOS originaux tel que d
 Les informations sur toutes les variables des fichiers .he5 se trouvent dans les appendices A et B du document: https://www2.acom.ucar.edu/sites/default/files/mopitt/v8_users_guide_201812.pdf
 
 ## Scripts Python
-
-Copyright (C) 2018 The HDF Group 
 
 Les deux scripts se basent sur le code de l'équipe HDF : http://hdfeos.org/zoo/LaRC/MOP02J-20131129-L2V17.8.3.he5.py
 
