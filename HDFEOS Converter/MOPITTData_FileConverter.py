@@ -36,8 +36,8 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 NB_COLUMNS = 14
 COMMA_DELIMITER = ','
 HDF_EOS5_FILE = ".he5"
-MAX_SIMULTANOUS_CONVERSIONS = 12
-INPUT_FOLDER = "C:\\development\\GitRepos\\MOPITT-Tutorial\\HDFEOS Converter"
+MAX_SIMULTANOUS_CONVERSIONS = 6
+INPUT_FOLDER = "L:\\DATA\\MOPITT\\NewData2026\\Migrated"
 DATA_LOCATION = 'HDFEOS/SWATHS/MOP02/Data Fields'
 LATITUDE_LOCATION = 'HDFEOS/SWATHS/MOP02/Geolocation Fields/Latitude'
 LONGITUDE_LOCATION = 'HDFEOS/SWATHS/MOP02/Geolocation Fields/Longitude'
